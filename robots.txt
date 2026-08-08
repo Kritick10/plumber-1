@@ -1,0 +1,11 @@
+User-agent: *
+
+Allow: /
+
+Disallow: /js/
+Disallow: /css/
+Disallow: /images/
+Disallow: /private/
+Disallow: /admin/
+
+Sitemap: https://www.example.com/sitemap.xml
