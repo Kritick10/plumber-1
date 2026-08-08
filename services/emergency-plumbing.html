@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="FlowForge provides fast emergency plumbing services across Bengaluru for burst pipes, serious leaks, overflowing toilets, blocked drains and water emergencies."
+  />
+
+  <meta name="theme-color" content="#10232b" />
+
+  <title>Emergency Plumbing Bengaluru | FlowForge Plumbing</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../css/styles.css" />
+
+  <style>
+    .service-detail-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .service-detail-image {
+      min-height: 540px;
+      border-radius: 30px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(11, 104, 116, 0.08),
+          rgba(16, 35, 43, 0.72)
+        ),
+        url("https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=1100&q=85")
+          center / cover;
+      box-shadow: var(--shadow);
+    }
+
+    .emergency-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+      padding: 9px 13px;
+      border-radius: 999px;
+      background: #ffe4df;
+      color: #a33b2d;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .emergency-badge span {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--orange);
+    }
+
+    .service-detail-content > p {
+      max-width: 650px;
+      margin-top: 24px;
+      font-size: 1.08rem;
+    }
+
+    .service-detail-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .service-feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 40px;
+    }
+
+    .service-feature {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--white);
+    }
+
+    .service-feature strong {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--ink);
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    .service-feature span {
+      color: var(--muted);
+      font-size: 0.87rem;
+    }
+
+    .problem-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 17px;
+      margin-top: 35px;
+      list-style: none;
+    }
+
+    .problem-list li {
+      padding: 19px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--white);
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .problem-list li::before {
+      margin-right: 10px;
+      color: var(--teal);
+      content: "✓";
+    }
+
+    .service-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service-step-card {
+      padding: 28px;
+      border-top: 2px solid var(--mint);
+      background: #17363e;
+    }
+
+    .service-step-card span {
+      display: block;
+      margin-bottom: 28px;
+      color: var(--mint);
+      font: 700 1.8rem "Space Grotesk", sans-serif;
+    }
+
+    .service-step-card h3 {
+      margin-bottom: 10px;
+      color: var(--white);
+    }
+
+    .service-step-card p {
+      color: #b4c6c5;
+      font-size: 0.92rem;
+    }
+
+    .faq-list {
+      max-width: 850px;
+      margin-top: 35px;
+      border-top: 1px solid var(--line);
+    }
+
+    .faq-list details {
+      padding: 21px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .faq-list summary {
+      cursor: pointer;
+      color: var(--ink);
+      font: 600 1.1rem "Space Grotesk", sans-serif;
+      list-style: none;
+    }
+
+    .faq-list summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-list summary::after {
+      float: right;
+      color: var(--teal);
+      content: "+";
+      font-size: 1.4rem;
+    }
+
+    .faq-list details[open] summary::after {
+      content: "−";
+    }
+
+    .faq-list details p {
+      max-width: 700px;
+      margin-top: 14px;
+    }
+
+    @media (max-width: 850px) {
+      .service-detail-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .service-detail-image {
+        min-height: 420px;
+        order: -1;
+      }
+
+      .service-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 580px) {
+      .service-feature-grid,
+      .problem-list {
+        grid-template-columns: 1fr;
+      }
+
+      .service-detail-image {
+        min-height: 350px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">
+    Skip to content
+  </a>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container announcement-inner">
+      <p>
+        <span class="status-dot" aria-hidden="true"></span>
+        Emergency plumbing support available 24/7
+      </p>
+
+      <a href="tel:+919876543210">
+        Call +91 98765 43210
+        <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+
+      <a class="brand" href="../index.html" aria-label="FlowForge Plumbing home">
+        <span class="brand-mark" aria-hidden="true">↗</span>
+
+        <span class="brand-name">
+          Flow<span>Forge</span>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="sr-only">Open navigation</span>
+      </button>
+
+      <nav
+        class="primary-navigation"
+        id="primary-navigation"
+        aria-label="Primary navigation"
+      >
+        <a class="nav-link" href="../index.html">Home</a>
+        <a class="nav-link active" href="../services.html">Services</a>
+        <a class="nav-link" href="../about.html">About us</a>
+        <a class="nav-link" href="../projects.html">Projects</a>
+        <a class="nav-link" href="../reviews.html">Reviews</a>
+        <a class="nav-link" href="../contact.html">Contact</a>
+
+        <a class="button button-small" href="../book-service.html">
+          Book a plumber
+          <span aria-hidden="true">↗</span>
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Service Hero -->
+    <section class="hero-section" aria-labelledby="service-hero-title">
+      <div class="container service-detail-layout">
+
+        <div class="service-detail-content">
+          <div class="emergency-badge">
+            <span></span>
+            24/7 emergency availability
+          </div>
+
+          <p class="eyebrow">
+            Emergency plumbing service
+          </p>
+
+          <h1 id="service-hero-title">
+            Emergency plumbing, without the panic.
+          </h1>
+
+          <p>
+            When water is going where it should not, every minute matters.
+            Our emergency team helps contain the problem, identify the cause
+            and make your property safe again.
+          </p>
+
+          <div class="service-detail-actions">
+            <a class="button button-primary" href="tel:+919876543210">
+              Call emergency line
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <a class="button button-secondary" href="../book-service.html">
+              Request a callback
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <div class="service-feature-grid">
+            <div class="service-feature">
+              <strong>Fast response</strong>
+              <span>We prioritise urgent plumbing problems.</span>
+            </div>
+
+            <div class="service-feature">
+              <strong>Clear diagnosis</strong>
+              <span>We find the cause before recommending work.</span>
+            </div>
+
+            <div class="service-feature">
+              <strong>Prepared team</strong>
+              <span>Our technicians arrive ready to assess the issue.</span>
+            </div>
+
+            <div class="service-feature">
+              <strong>Clean finish</strong>
+              <span>We test the repair and respect your property.</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="service-detail-image"
+          role="img"
+          aria-label="Plumber responding to an emergency repair"
+        ></div>
+
+      </div>
+    </section>
+
+    <!-- Problems We Handle -->
+    <section class="section-padding" aria-labelledby="problems-title">
+      <div class="container">
+
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">
+              What we handle
+            </p>
+
+            <h2 id="problems-title">
+              If it cannot wait, call us.
+            </h2>
+          </div>
+
+          <p>
+            Do not ignore a serious plumbing issue. Fast action can help
+            limit property damage and reduce the cost of the eventual repair.
+          </p>
+        </div>
+
+        <ul class="problem-list">
+          <li>Burst or leaking pipes</li>
+          <li>Overflowing toilets</li>
+          <li>Major water leaks</li>
+          <li>Blocked drains and backups</li>
+          <li>Water tank overflow</li>
+          <li>No water throughout the property</li>
+          <li>Low water pressure emergencies</li>
+          <li>Water heater leaks</li>
+          <li>Sewage or drain odour problems</li>
+          <li>Broken taps and valves</li>
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- Emergency Process -->
+    <section class="section-dark section-padding">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow eyebrow-light">
+            Our emergency process
+          </p>
+
+          <h2>
+            Calm, clear and focused on the next step.
+          </h2>
+        </div>
+
+        <div class="service-steps">
+
+          <article class="service-step-card">
+            <span>01</span>
+
+            <h3>Contact our team</h3>
+
+            <p>
+              Tell us what has happened, where you are located and whether
+              the water supply has been isolated.
+            </p>
+          </article>
+
+          <article class="service-step-card">
+            <span>02</span>
+
+            <h3>Contain the issue</h3>
+
+            <p>
+              We help you understand the immediate steps to reduce further
+              damage while our team prepares to respond.
+            </p>
+          </article>
+
+          <article class="service-step-card">
+            <span>03</span>
+
+            <h3>Repair and test</h3>
+
+            <p>
+              We identify the cause, complete the repair and test the
+              plumbing system before finishing the job.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section-padding">
+      <div class="container difference-grid">
+
+        <div
+          class="difference-media"
+          role="img"
+          aria-label="Professional plumbing tools"
+        ></div>
+
+        <div class="difference-content" style="color: var(--ink);">
+          <p class="eyebrow">
+            Why choose FlowForge
+          </p>
+
+          <h2>
+            Urgent does not mean careless.
+          </h2>
+
+          <p style="color: var(--muted);">
+            Emergency situations can be stressful. Our job is to bring
+            structure to the situation, explain what is happening and
+            restore your plumbing safely.
+          </p>
+
+          <ul class="check-list">
+            <li style="color: var(--muted);">
+              Transparent communication
+            </li>
+
+            <li style="color: var(--muted);">
+              Respectful on-site service
+            </li>
+
+            <li style="color: var(--muted);">
+              Quality repair approach
+            </li>
+
+            <li style="color: var(--muted);">
+              Proper testing before handover
+            </li>
+          </ul>
+
+          <a class="button button-primary" href="../reviews.html">
+            Read customer reviews
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="service-intro section-padding" aria-labelledby="faq-title">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">
+            Emergency plumbing FAQ
+          </p>
+
+          <h2 id="faq-title">
+            Common questions before you call.
+          </h2>
+        </div>
+
+        <div class="faq-list">
+
+          <details>
+            <summary>
+              What should I do before the plumber arrives?
+            </summary>
+
+            <p>
+              If it is safe to do so, turn off the nearest isolation valve
+              or the main water supply. Move valuable items away from the
+              affected area and avoid using electrical equipment near water.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Do you handle emergency plumbing at night?
+            </summary>
+
+            <p>
+              Our emergency line is available 24/7. Call the emergency number
+              so we can understand the situation and confirm availability.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Can you help with a blocked drain?
+            </summary>
+
+            <p>
+              Yes. We handle slow drains, serious blockages, drain backups
+              and related pipe problems for residential and commercial
+              properties.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Will I receive a price before work begins?
+            </summary>
+
+            <p>
+              We explain the diagnosis and recommended work before proceeding.
+              The final estimate may depend on the cause, access and parts
+              required.
+            </p>
+          </details>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta section-padding">
+      <div class="container final-cta-inner">
+
+        <div>
+          <p class="eyebrow eyebrow-light">
+            Plumbing emergency?
+          </p>
+
+          <h2>
+            Call now and let us help you take the next step.
+          </h2>
+        </div>
+
+        <div class="final-cta-actions">
+          <a class="button button-lime" href="tel:+919876543210">
+            Call emergency line
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a
+            class="button button-ghost"
+            href="https://wa.me/919876543210"
+            target="_blank"
+            rel="noopener"
+          >
+            WhatsApp us
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+        <a class="brand brand-light" href="../index.html">
+          <span class="brand-mark">↗</span>
+
+          <span class="brand-name">
+            Flow<span>Forge</span>
+          </span>
+        </a>
+
+        <p>
+          Modern plumbing service for homes and businesses across Bengaluru.
+        </p>
+      </div>
+
+      <div>
+        <h4>Explore</h4>
+        <a href="../index.html">Home</a>
+        <a href="../services.html">Services</a>
+        <a href="../about.html">About us</a>
+        <a href="../projects.html">Projects</a>
