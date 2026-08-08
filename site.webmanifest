@@ -1,0 +1,16 @@
+{
+  "name": "FlowForge Plumbing",
+  "short_name": "FlowForge",
+  "description": "Professional plumbing services for homes and businesses across Bengaluru.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#f5f8f7",
+  "theme_color": "#10232b",
+  "orientation": "portrait-primary",
+  "lang": "en-IN",
+  "categories": [
+    "business",
+    "services",
+    "utilities"
+  ]
+}
