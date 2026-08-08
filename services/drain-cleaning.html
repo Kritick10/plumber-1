@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="FlowForge provides professional drain cleaning and blockage removal services across Bengaluru for homes, apartments, offices, restaurants and commercial properties."
+  />
+
+  <meta name="theme-color" content="#10232b" />
+
+  <title>Drain Cleaning Bengaluru | FlowForge Plumbing</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../css/styles.css" />
+
+  <style>
+    .drain-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .drain-image {
+      min-height: 540px;
+      border-radius: 30px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(11, 104, 116, 0.1),
+          rgba(16, 35, 43, 0.75)
+        ),
+        url("https://images.unsplash.com/photo-1542013936693-884638864c58?auto=format&fit=crop&w=1100&q=85")
+          center / cover;
+      box-shadow: var(--shadow);
+    }
+
+    .drain-content > p {
+      max-width: 650px;
+      margin-top: 24px;
+      font-size: 1.08rem;
+    }
+
+    .drain-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .drain-feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 40px;
+    }
+
+    .drain-feature {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--white);
+    }
+
+    .drain-feature strong {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--ink);
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    .drain-feature span {
+      color: var(--muted);
+      font-size: 0.87rem;
+    }
+
+    .drain-problem-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 17px;
+      margin-top: 35px;
+    }
+
+    .drain-problem {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 17px;
+      background: var(--white);
+    }
+
+    .drain-problem strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--ink);
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    .drain-problem p {
+      font-size: 0.9rem;
+    }
+
+    .drain-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .drain-step {
+      padding: 28px;
+      border-top: 2px solid var(--mint);
+      background: #17363e;
+    }
+
+    .drain-step span {
+      display: block;
+      margin-bottom: 28px;
+      color: var(--mint);
+      font: 700 1.8rem "Space Grotesk", sans-serif;
+    }
+
+    .drain-step h3 {
+      margin-bottom: 10px;
+      color: var(--white);
+    }
+
+    .drain-step p {
+      color: #b4c6c5;
+      font-size: 0.92rem;
+    }
+
+    .faq-list {
+      max-width: 850px;
+      margin-top: 35px;
+      border-top: 1px solid var(--line);
+    }
+
+    .faq-list details {
+      padding: 21px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .faq-list summary {
+      cursor: pointer;
+      color: var(--ink);
+      font: 600 1.1rem "Space Grotesk", sans-serif;
+      list-style: none;
+    }
+
+    .faq-list summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-list summary::after {
+      float: right;
+      color: var(--teal);
+      content: "+";
+      font-size: 1.4rem;
+    }
+
+    .faq-list details[open] summary::after {
+      content: "−";
+    }
+
+    .faq-list details p {
+      max-width: 700px;
+      margin-top: 14px;
+    }
+
+    @media (max-width: 850px) {
+      .drain-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .drain-image {
+        min-height: 420px;
+        order: -1;
+      }
+
+      .drain-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 580px) {
+      .drain-feature-grid,
+      .drain-problem-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .drain-image {
+        min-height: 350px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">
+    Skip to content
+  </a>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container announcement-inner">
+      <p>
+        <span class="status-dot" aria-hidden="true"></span>
+        Emergency plumbing support available 24/7
+      </p>
+
+      <a href="tel:+919876543210">
+        Call +91 98765 43210
+        <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+
+      <a class="brand" href="../index.html" aria-label="FlowForge Plumbing home">
+        <span class="brand-mark" aria-hidden="true">↗</span>
+
+        <span class="brand-name">
+          Flow<span>Forge</span>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="sr-only">Open navigation</span>
+      </button>
+
+      <nav
+        class="primary-navigation"
+        id="primary-navigation"
+        aria-label="Primary navigation"
+      >
+        <a class="nav-link" href="../index.html">Home</a>
+        <a class="nav-link active" href="../services.html">Services</a>
+        <a class="nav-link" href="../about.html">About us</a>
+        <a class="nav-link" href="../projects.html">Projects</a>
+        <a class="nav-link" href="../reviews.html">Reviews</a>
+        <a class="nav-link" href="../contact.html">Contact</a>
+
+        <a class="button button-small" href="../book-service.html">
+          Book a plumber
+          <span aria-hidden="true">↗</span>
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Hero -->
+    <section class="hero-section" aria-labelledby="drain-hero-title">
+      <div class="container drain-layout">
+
+        <div class="drain-content">
+          <p class="eyebrow">
+            Drain cleaning and blockage removal
+          </p>
+
+          <h1 id="drain-hero-title">
+            Clear the blockage. Restore the flow.
+          </h1>
+
+          <p>
+            Slow drains, unpleasant smells and recurring blockages are signs
+            that your drainage system needs attention. FlowForge helps clear
+            the immediate problem and identify what caused it.
+          </p>
+
+          <div class="drain-actions">
+            <a class="button button-primary" href="../book-service.html">
+              Book drain service
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <a class="button button-secondary" href="tel:+919876543210">
+              Call our team
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <div class="drain-feature-grid">
+            <div class="drain-feature">
+              <strong>Fast response</strong>
+              <span>We prioritise serious blockages and backups.</span>
+            </div>
+
+            <div class="drain-feature">
+              <strong>Careful inspection</strong>
+              <span>We look beyond the visible part of the problem.</span>
+            </div>
+
+            <div class="drain-feature">
+              <strong>Residential support</strong>
+              <span>Reliable service for kitchens, bathrooms and homes.</span>
+            </div>
+
+            <div class="drain-feature">
+              <strong>Commercial support</strong>
+              <span>Help for offices, restaurants and property managers.</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="drain-image"
+          role="img"
+          aria-label="Professional plumber working on a drainage system"
+        ></div>
+
+      </div>
+    </section>
+
+    <!-- Problems -->
+    <section class="section-padding" aria-labelledby="drain-problems-title">
+      <div class="container">
+
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">
+              Drain problems we handle
+            </p>
+
+            <h2 id="drain-problems-title">
+              Do not let a slow drain become a backup.
+            </h2>
+          </div>
+
+          <p>
+            Recurring drainage problems often need more than a quick surface
+            fix. We help identify the cause and recommend the right solution.
+          </p>
+        </div>
+
+        <div class="drain-problem-grid">
+
+          <article class="drain-problem">
+            <strong>Slow kitchen drains</strong>
+            <p>
+              We help clear buildup and inspect the affected connections.
+            </p>
+          </article>
+
+          <article class="drain-problem">
+            <strong>Blocked bathroom drains</strong>
+            <p>
+              Reliable support for water that drains slowly or stops completely.
+            </p>
+          </article>
+
+          <article class="drain-problem">
+            <strong>Overflowing floor drains</strong>
+            <p>
+              We investigate backups and help restore proper drainage.
+            </p>
+          </article>
+
+          <article class="drain-problem">
+            <strong>Recurring blockages</strong>
+            <p>
+              We look for the underlying issue instead of repeating temporary fixes.
+            </p>
+          </article>
+
+          <article class="drain-problem">
+            <strong>Bad drainage smells</strong>
+            <p>
+              We inspect traps, connections and possible drainage concerns.
+            </p>
+          </article>
+
+          <article class="drain-problem">
+            <strong>Commercial drainage issues</strong>
+            <p>
+              Support for restaurants, offices, apartments and retail spaces.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section-dark section-padding">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow eyebrow-light">
+            Our drain cleaning process
+          </p>
+
+          <h2>
+            A cleaner approach to blocked drains.
+          </h2>
+        </div>
+
+        <div class="drain-steps">
+
+          <article class="drain-step">
+            <span>01</span>
+
+            <h3>Understand the symptoms</h3>
+
+            <p>
+              We ask where the blockage appears, how often it returns and
+              what fixtures are affected.
+            </p>
+          </article>
+
+          <article class="drain-step">
+            <span>02</span>
+
+            <h3>Inspect the system</h3>
+
+            <p>
+              We examine accessible drains, traps, pipes and connections to
+              understand the likely cause.
+            </p>
+          </article>
+
+          <article class="drain-step">
+            <span>03</span>
+
+            <h3>Clear and verify</h3>
+
+            <p>
+              We clear the affected area, test the flow and explain any
+              recommended follow-up work.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Why FlowForge -->
+    <section class="section-padding">
+      <div class="container difference-grid">
+
+        <div
+          class="difference-media"
+          role="img"
+          aria-label="Professional plumbing equipment"
+        ></div>
+
+        <div class="difference-content" style="color: var(--ink);">
+          <p class="eyebrow">
+            Why choose FlowForge
+          </p>
+
+          <h2>
+            We focus on the cause, not only the symptom.
+          </h2>
+
+          <p style="color: var(--muted);">
+            A drain that repeatedly blocks may have a deeper issue involving
+            buildup, damaged pipes, poor flow or an overloaded system.
+          </p>
+
+          <ul class="check-list">
+            <li style="color: var(--muted);">
+              Clear service recommendations
+            </li>
+
+            <li style="color: var(--muted);">
+              Respectful and tidy workmanship
+            </li>
+
+            <li style="color: var(--muted);">
+              Residential and commercial support
+            </li>
+
+            <li style="color: var(--muted);">
+              Proper testing after the work
+            </li>
+          </ul>
+
+          <a class="button button-primary" href="../reviews.html">
+            Read customer reviews
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="service-intro section-padding" aria-labelledby="drain-faq-title">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">
+            Drain cleaning FAQ
+          </p>
+
+          <h2 id="drain-faq-title">
+            Questions about blocked drains.
+          </h2>
+        </div>
+
+        <div class="faq-list">
+
+          <details>
+            <summary>
+              Why does my drain keep blocking?
+            </summary>
+
+            <p>
+              Recurring blockages may be caused by buildup, damaged pipes,
+              poor drainage flow, excessive waste or an issue further along
+              the drainage line.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Can you help with a kitchen sink blockage?
+            </summary>
+
+            <p>
+              Yes. We handle kitchen sink blockages, slow drainage, unpleasant
+              smells and related pipe or trap issues.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Is a blocked drain an emergency?
+            </summary>
+
+            <p>
+              It depends on the severity. An overflowing drain, sewage backup
+              or blockage affecting multiple fixtures should be treated as
+              urgent and addressed quickly.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Do you provide commercial drain cleaning?
+            </summary>
+
+            <p>
+              Yes. FlowForge supports restaurants, offices, apartment
+              communities, shops and other commercial properties.
+            </p>
+          </details>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="final-cta section-padding">
+      <div class="container final-cta-inner">
+
+        <div>
+          <p class="eyebrow eyebrow-light">
+            Drain blocked?
+          </p>
+
+          <h2>
+            Let’s get the water moving again.
+          </h2>
+        </div>
+
+        <div class="final-cta-actions">
+          <a class="button button-lime" href="../book-service.html">
+            Book drain cleaning
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a class="button button-ghost" href="tel:+919876543210">
+            Call now
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+        <a class="brand brand-light" href="../index.html">
+          <span class="brand-mark">↗</span>
+
+          <span class="brand-name">
+            Flow<span>Forge</span>
+          </span>
+        </a>
+
+        <p>
+          Modern plumbing service for homes and businesses across Bengaluru.
+        </p>
+      </div>
+
+      <div>
+        <h4>Explore</h4>
+        <a href="../index.html">Home</a>
+        <a href="../services.html">Services</a>
+        <a href="../about.html">About us</a>
+        <a href="../projects.html">Projects</a>
+      </div>
+
+      <div>
+        <h4>Services</h4>
+        <a href="emergency-plumbing.html">
+          Emergency plumbing
+        </a>
+        <a href="leak-detection.html">
+          Leak repair
+        </a>
+        <a href="drain-cleaning.html">
+          Drain cleaning
+        </a>
+        <a href="water-heater.html">
+          Water heater service
+        </a>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+
+        <a href="tel:+919876543210">
+          +91 98765 43210
+        </a>
+
+        <a href="mailto:hello@flowforge.in">
+          hello@flowforge.in
+        </a>
+
+        <p>
+          Mon–Sun · 24/7
