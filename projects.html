@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="Explore FlowForge Plumbing projects across Bengaluru, including residential repairs, commercial installations, drain work and plumbing upgrades."
+  />
+
+  <meta name="theme-color" content="#10232b" />
+
+  <title>Our Plumbing Projects | FlowForge Plumbing</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <style>
+    .project-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .project-gallery-grid .project-card:first-child {
+      grid-column: span 2;
+    }
+
+    .project-gallery-grid .project-card:first-child .project-image {
+      height: 430px;
+    }
+
+    .project-tag {
+      display: inline-flex;
+      margin-bottom: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--teal);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .project-description {
+      max-width: 600px;
+      margin-top: 14px;
+      font-size: 0.94rem;
+    }
+
+    .project-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 55px;
+    }
+
+    .project-stat {
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+    }
+
+    .project-stat strong {
+      display: block;
+      color: var(--ink);
+      font: 700 1.7rem "Space Grotesk", sans-serif;
+    }
+
+    .project-stat span {
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 700px) {
+      .project-gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-gallery-grid .project-card:first-child {
+        grid-column: auto;
+      }
+
+      .project-gallery-grid .project-card:first-child .project-image {
+        height: 270px;
+      }
+
+      .project-stats {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        margin-top: 35px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">
+    Skip to content
+  </a>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container announcement-inner">
+      <p>
+        <span class="status-dot" aria-hidden="true"></span>
+        Emergency plumbing support available 24/7
+      </p>
+
+      <a href="tel:+919876543210">
+        Call +91 98765 43210
+        <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+
+      <a class="brand" href="index.html" aria-label="FlowForge Plumbing home">
+        <span class="brand-mark" aria-hidden="true">↗</span>
+
+        <span class="brand-name">
+          Flow<span>Forge</span>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="sr-only">Open navigation</span>
+      </button>
+
+      <nav
+        class="primary-navigation"
+        id="primary-navigation"
+        aria-label="Primary navigation"
+      >
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="about.html">About us</a>
+        <a class="nav-link active" href="projects.html">Projects</a>
+        <a class="nav-link" href="reviews.html">Reviews</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+
+        <a class="button button-small" href="book-service.html">
+          Book a plumber
+          <span aria-hidden="true">↗</span>
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Projects Hero -->
+    <section class="hero-section" aria-labelledby="projects-hero-title">
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+          <p class="eyebrow">
+            Recent work
+          </p>
+
+          <h1 id="projects-hero-title">
+            Work that speaks for itself.
+          </h1>
+
+          <p class="hero-description">
+            From urgent repairs to complete installations, every project
+            is completed with care, precision and respect for the property.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="book-service.html">
+              Start your project
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <a class="button button-secondary" href="services.html">
+              View our services
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <div class="project-stats">
+            <div class="project-stat">
+              <strong>250+</strong>
+              <span>Jobs completed</span>
+            </div>
+
+            <div class="project-stat">
+              <strong>4.9/5</strong>
+              <span>Average rating</span>
+            </div>
+
+            <div class="project-stat">
+              <strong>24/7</strong>
+              <span>Emergency support</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-media-wrap">
+          <div
+            class="hero-media"
+            role="img"
+            aria-label="Completed residential plumbing project"
+          ></div>
+
+          <div class="hero-location-tag">
+            <span aria-hidden="true">⌖</span>
+            Projects across Bengaluru
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Project Gallery -->
+    <section class="section-padding" aria-labelledby="gallery-title">
+      <div class="container">
+
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">
+              Selected projects
+            </p>
+
+            <h2 id="gallery-title">
+              Practical solutions. Clean finishes.
+            </h2>
+          </div>
+
+          <p>
+            These examples show the range of work our team handles for
+            homeowners, businesses and property managers.
+          </p>
+        </div>
+
+        <div class="project-gallery-grid">
+
+          <!-- Project One -->
+          <a
+            class="project-card"
+            href="projects/apartment-pipe-repair.html"
+          >
+            <div class="project-image project-image-one"></div>
+
+            <div class="project-info">
+              <span class="project-tag">
+                Residential · Whitefield
+              </span>
+
+              <h3>
+                Apartment pipe repair
+              </h3>
+
+              <p class="project-description">
+                Repaired a damaged kitchen supply line and restored
+                water flow without replacing the entire wall section.
+              </p>
+
+              <span class="circle-arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+
+          <!-- Project Two -->
+          <a
+            class="project-card"
+            href="projects/commercial-installation.html"
+          >
+            <div class="project-image project-image-two"></div>
+
+            <div class="project-info">
+              <span class="project-tag">
+                Commercial · Indiranagar
+              </span>
+
+              <h3>
+                Restaurant plumbing installation
+              </h3>
+
+              <p class="project-description">
+                Installed dependable drainage and water supply systems
+                for a busy restaurant renovation.
+              </p>
+
+              <span class="circle-arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+
+          <!-- Project Three -->
+          <a
+            class="project-card"
+            href="projects/water-heater-replacement.html"
+          >
+            <div
+              class="project-image"
+              style="
+                background-image:
+                  linear-gradient(0deg, rgba(16, 35, 43, 0.55), transparent 55%),
+                  url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=85');
+              "
+            ></div>
+
+            <div class="project-info">
+              <span class="project-tag">
+                Residential · HSR Layout
+              </span>
+
+              <h3>
+                Water heater replacement
+              </h3>
+
+              <p class="project-description">
+                Replaced an unreliable water heater and improved the
+                hot-water setup for a family home.
+              </p>
+
+              <span class="circle-arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+
+          <!-- Project Four -->
+          <a
+            class="project-card"
+            href="projects/drainage-upgrade.html"
+          >
+            <div
+              class="project-image"
+              style="
+                background-image:
+                  linear-gradient(0deg, rgba(16, 35, 43, 0.55), transparent 55%),
+                  url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=85');
+              "
+            ></div>
+
+            <div class="project-info">
+              <span class="project-tag">
+                Apartment · Electronic City
+              </span>
+
+              <h3>
+                Common drainage upgrade
+              </h3>
+
+              <p class="project-description">
+                Improved drainage performance for a multi-unit apartment
+                property experiencing repeated blockages.
+              </p>
+
+              <span class="circle-arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+
+          <!-- Project Five -->
+          <a
+            class="project-card"
+            href="projects/bathroom-renovation.html"
+          >
+            <div
+              class="project-image"
+              style="
+                background-image:
+                  linear-gradient(0deg, rgba(16, 35, 43, 0.55), transparent 55%),
+                  url('https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=900&q=85');
+              "
+            ></div>
+
+            <div class="project-info">
+              <span class="project-tag">
+                Residential · Koramangala
+              </span>
+
+              <h3>
+                Bathroom plumbing renovation
+              </h3>
+
+              <p class="project-description">
+                Delivered new fixture connections and concealed plumbing
+                support during a full bathroom renovation.
+              </p>
+
+              <span class="circle-arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Project Standard -->
+    <section class="section-dark section-padding">
+      <div class="container difference-grid">
+
+        <div class="difference-content">
+          <p class="eyebrow eyebrow-light">
+            Our project standard
+          </p>
+
+          <h2>
+            We care about what happens after the repair.
+          </h2>
+
+          <p>
+            A successful plumbing job should be reliable, neat and easy
+            for the customer to understand after our team leaves.
+          </p>
+
+          <ul class="check-list">
+            <li>Clear scope before work begins</li>
+            <li>Protected and organised work areas</li>
+            <li>Proper testing after installation or repair</li>
+            <li>Simple handover and maintenance guidance</li>
+          </ul>
+
+          <a class="button button-lime" href="contact.html">
+            Discuss your project
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div
+          class="difference-media"
+          role="img"
+          aria-label="Plumbing tools prepared for a project"
+        ></div>
+
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section-padding">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">
+            Project process
+          </p>
+
+          <h2>
+            From first conversation to finished work.
+          </h2>
+        </div>
+
+        <div class="process-grid">
+
+          <article class="process-step">
+            <span>01</span>
+            <h3>Understand the property</h3>
+            <p>
+              We learn about the space, the plumbing system and the actual goal.
+            </p>
+          </article>
+
+          <article class="process-step">
+            <span>02</span>
+            <h3>Plan the solution</h3>
+            <p>
+              We identify the work required and explain the available options.
+            </p>
+          </article>
+
+          <article class="process-step">
+            <span>03</span>
+            <h3>Complete the work</h3>
+            <p>
+              Our team handles the repair or installation carefully and neatly.
+            </p>
+          </article>
+
+          <article class="process-step">
+            <span>04</span>
+            <h3>Test and hand over</h3>
+            <p>
+              We test the result and explain what was completed.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="final-cta section-padding">
+      <div class="container final-cta-inner">
+
+        <div>
+          <p class="eyebrow eyebrow-light">
+            Have a plumbing project?
+          </p>
+
+          <h2>
+            Let’s build a reliable solution for your property.
+          </h2>
+        </div>
+
+        <div class="final-cta-actions">
+          <a class="button button-lime" href="book-service.html">
+            Book a consultation
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a class="button button-ghost" href="tel:+919876543210">
+            Call our team
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+        <a class="brand brand-light" href="index.html">
+          <span class="brand-mark">↗</span>
+
+          <span class="brand-name">
+            Flow<span>Forge</span>
+          </span>
+        </a>
+
+        <p>
+          Modern plumbing service for homes and businesses across Bengaluru.
+        </p>
+      </div>
+
+      <div>
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div>
+        <h4>Services</h4>
+        <a href="services/emergency-plumbing.html">
+          Emergency plumbing
+        </a>
+        <a href="services/leak-detection.html">
+          Leak repair
+        </a>
+        <a href="services/drain-cleaning.html">
+          Drain cleaning
+        </a>
+        <a href="services/water-heater.html">
+          Water heater service
+        </a>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+
+        <a href="tel:+919876543210">
+          +91 98765 43210
+        </a>
+
+        <a href="mailto:hello@flowforge.in">
+          hello@flowforge.in
+        </a>
+
+        <p>
+          Mon–Sun · 24/7 emergency line
+        </p>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <span>
+        © 2026 FlowForge Plumbing. All rights reserved.
+      </span>
+
+      <span>
+        <a href="privacy-policy.html">Privacy</a>
+        ·
+        <a href="terms.html">Terms</a>
+      </span>
+    </div>
+  </footer>
+
+  <!-- Mobile Action Bar -->
+  <div class="mobile-action-bar">
+    <a href="tel:+919876543210">
+      Call now
+    </a>
+
+    <a
+      href="https://wa.me/919876543210"
+      target="_blank"
+      rel="noopener"
+    >
+      WhatsApp
+    </a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
