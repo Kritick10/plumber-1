@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="Read customer reviews for FlowForge Plumbing and discover why Bengaluru homeowners and businesses trust our plumbing team."
+  />
+
+  <meta name="theme-color" content="#10232b" />
+
+  <title>Customer Reviews | FlowForge Plumbing</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <style>
+    .review-summary {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .rating-score {
+      font: 700 clamp(4rem, 8vw, 7rem) / 0.9 "Space Grotesk", sans-serif;
+      letter-spacing: -0.08em;
+    }
+
+    .rating-stars {
+      margin: 15px 0 8px;
+      color: #d88b25;
+      font-size: 1.35rem;
+      letter-spacing: 4px;
+    }
+
+    .rating-label {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .rating-bars {
+      display: grid;
+      gap: 13px;
+    }
+
+    .rating-bar-row {
+      display: grid;
+      grid-template-columns: 35px 1fr 40px;
+      align-items: center;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .rating-bar {
+      height: 8px;
+      overflow: hidden;
+      border-radius: 99px;
+      background: var(--line);
+    }
+
+    .rating-bar span {
+      display: block;
+      height: 100%;
+      border-radius: inherit;
+      background: var(--teal);
+    }
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .review-card {
+      display: flex;
+      min-height: 300px;
+      flex-direction: column;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .review-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+    }
+
+    .review-card:nth-child(2) {
+      background: var(--teal);
+      color: var(--white);
+    }
+
+    .review-card:nth-child(2) p,
+    .review-card:nth-child(2) .review-location {
+      color: #c3d9d6;
+    }
+
+    .review-card:nth-child(2) .review-name {
+      color: var(--white);
+    }
+
+    .review-quote {
+      margin: 24px 0;
+      color: var(--ink);
+      font: 500 1.25rem / 1.3 "Space Grotesk", sans-serif;
+      letter-spacing: -0.035em;
+    }
+
+    .review-card:nth-child(2) .review-quote {
+      color: var(--white);
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: auto;
+    }
+
+    .review-avatar {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--soft);
+      color: var(--teal);
+      font-weight: 700;
+    }
+
+    .review-card:nth-child(2) .review-avatar {
+      background: var(--mint);
+      color: var(--ink);
+    }
+
+    .review-name {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .review-location {
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .review-form-card {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px;
+      border-radius: var(--radius);
+      background: var(--mint);
+    }
+
+    .review-form {
+      display: grid;
+      gap: 17px;
+      margin-top: 25px;
+    }
+
+    .review-form label {
+      color: var(--ink);
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .review-form input,
+    .review-form select,
+    .review-form textarea {
+      width: 100%;
+      margin-top: 7px;
+      padding: 13px 14px;
+      border: 1px solid rgba(16, 35, 43, 0.18);
+      border-radius: 11px;
+      outline: none;
+      background: rgba(255, 255, 255, 0.76);
+      color: var(--ink);
+    }
+
+    .review-form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .review-form input:focus,
+    .review-form select:focus,
+    .review-form textarea:focus {
+      border-color: var(--teal);
+      box-shadow: 0 0 0 4px rgba(11, 104, 116, 0.12);
+    }
+
+    .review-success {
+      display: none;
+      margin-top: 17px;
+      padding: 13px;
+      border-radius: 10px;
+      background: #e2f4dc;
+      color: #286226;
+      font-size: 0.88rem;
+    }
+
+    @media (max-width: 780px) {
+      .review-summary {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .review-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .review-form-card {
+        padding: 27px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">
+    Skip to content
+  </a>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container announcement-inner">
+      <p>
+        <span class="status-dot" aria-hidden="true"></span>
+        Emergency plumbing support available 24/7
+      </p>
+
+      <a href="tel:+919876543210">
+        Call +91 98765 43210
+        <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+
+      <a class="brand" href="index.html" aria-label="FlowForge Plumbing home">
+        <span class="brand-mark" aria-hidden="true">↗</span>
+
+        <span class="brand-name">
+          Flow<span>Forge</span>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="sr-only">Open navigation</span>
+      </button>
+
+      <nav
+        class="primary-navigation"
+        id="primary-navigation"
+        aria-label="Primary navigation"
+      >
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="about.html">About us</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link active" href="reviews.html">Reviews</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+
+        <a class="button button-small" href="book-service.html">
+          Book a plumber
+          <span aria-hidden="true">↗</span>
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Reviews Hero -->
+    <section class="hero-section" aria-labelledby="reviews-hero-title">
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+          <p class="eyebrow">
+            Customer reviews
+          </p>
+
+          <h1 id="reviews-hero-title">
+            Good work gets remembered.
+          </h1>
+
+          <p class="hero-description">
+            See why homeowners, apartment managers and businesses across
+            Bengaluru trust FlowForge with their plumbing.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="book-service.html">
+              Book your service
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <a class="button button-secondary" href="contact.html">
+              Contact our team
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-media-wrap">
+          <div
+            class="hero-media"
+            role="img"
+            aria-label="Happy customer after a completed plumbing service"
+          ></div>
+
+          <div class="hero-review-card">
+            <div class="star-row" aria-label="5 out of 5 stars">
+              ★★★★★
+            </div>
+
+            <strong>4.9 out of 5</strong>
+
+            <span>
+              Based on local customer feedback.
+            </span>
+          </div>
+
+          <div class="hero-location-tag">
+            <span aria-hidden="true">⌖</span>
+            Trusted in Bengaluru
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Rating Summary -->
+    <section class="section-padding">
+      <div class="container review-summary">
+
+        <div>
+          <p class="eyebrow">
+            Customer satisfaction
+          </p>
+
+          <div class="rating-score">
+            4.9
+          </div>
+
+          <div class="rating-stars" aria-label="5 out of 5 stars">
+            ★★★★★
+          </div>
+
+          <p class="rating-label">
+            Average rating from FlowForge customers
+          </p>
+        </div>
+
+        <div class="rating-bars">
+
+          <div class="rating-bar-row">
+            <span>5★</span>
+            <div class="rating-bar">
+              <span style="width: 94%;"></span>
+            </div>
+            <span>94%</span>
+          </div>
+
+          <div class="rating-bar-row">
+            <span>4★</span>
+            <div class="rating-bar">
+              <span style="width: 5%;"></span>
+            </div>
+            <span>5%</span>
+          </div>
+
+          <div class="rating-bar-row">
+            <span>3★</span>
+            <div class="rating-bar">
+              <span style="width: 1%;"></span>
+            </div>
+            <span>1%</span>
+          </div>
+
+          <div class="rating-bar-row">
+            <span>2★</span>
+            <div class="rating-bar">
+              <span style="width: 0%;"></span>
+            </div>
+            <span>0%</span>
+          </div>
+
+          <div class="rating-bar-row">
+            <span>1★</span>
+            <div class="rating-bar">
+              <span style="width: 0%;"></span>
+            </div>
+            <span>0%</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Review Cards -->
+    <section class="service-intro section-padding">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">
+            From our customers
+          </p>
+
+          <h2>
+            The experience matters.
+          </h2>
+        </div>
+
+        <div class="review-grid">
+
+          <article class="review-card">
+            <div class="star-row" aria-label="5 out of 5 stars">
+              ★★★★★
+            </div>
+
+            <p class="review-quote">
+              “They found the source of our kitchen leak quickly and
+              explained everything before starting the repair.”
+            </p>
+
+            <div class="review-author">
+              <div class="review-avatar">AR</div>
+
+              <div>
+                <div class="review-name">Ananya Rao</div>
+                <div class="review-location">Whitefield</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="star-row" aria-label="5 out of 5 stars">
+              ★★★★★
+            </div>
+
+            <p class="review-quote">
+              “Fast response, professional behaviour and no unnecessary
+              confusion. I would definitely call them again.”
+            </p>
+
+            <div class="review-author">
+              <div class="review-avatar">KM</div>
+
+              <div>
+                <div class="review-name">Karan Mehta</div>
+                <div class="review-location">HSR Layout</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="star-row" aria-label="5 out of 5 stars">
+              ★★★★★
+            </div>
+
+            <p class="review-quote">
+              “The team completed our bathroom plumbing work neatly and
+              left the property cleaner than expected.”
+            </p>
+
+            <div class="review-author">
+              <div class="review-avatar">PS</div>
+
+              <div>
+                <div class="review-name">Priya Shah</div>
+                <div class="review-location">Koramangala</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="star-row" aria-label="5 out of 5 stars">
+              ★★★★★
+            </div>
+
+            <p class="review-quote">
+              “We had a blocked drain in our restaurant before opening.
+              FlowForge handled it without delaying our service.”
+            </p>
+
+            <div class="review-author">
+              <div class="review-avatar">RV</div>
+
+              <div>
+                <div class="review-name">Rahul Varma</div>
+                <div class="review-location">Indiranagar</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="star-row" aria-label="5 out of 5 stars">
+              ★★★★★
+            </div>
+
+            <p class="review-quote">
+              “They were punctual, respectful and very clear about the
+              estimate. The repair has worked perfectly.”
+            </p>
+
+            <div class="review-author">
+              <div class="review-avatar">SN</div>
+
+              <div>
+                <div class="review-name">Sonal Nair</div>
+                <div class="review-location">Electronic City</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="star-row" aria-label="5 out of 5 stars">
+              ★★★★★
+            </div>
+
+            <p class="review-quote">
+              “A much better experience than other plumbers we have used.
+              Good communication from start to finish.”
+            </p>
+
+            <div class="review-author">
+              <div class="review-avatar">DK</div>
+
+              <div>
+                <div class="review-name">Dev Kapoor</div>
+                <div class="review-location">Marathahalli</div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Review Submission -->
+    <section class="section-padding">
+      <div class="container">
+
+        <div class="review-form-card">
+          <p class="eyebrow">
+            Worked with us?
+          </p>
+
+          <h2>
+            Share your experience.
+          </h2>
+
+          <p style="margin-top: 15px; color: var(--ink);">
+            Your feedback helps us improve and helps other customers
+            choose the right plumbing team.
+          </p>
+
+          <form class="review-form" id="review-form">
+
+            <label for="review-name">
+              Your name
+              <input
+                id="review-name"
+                name="name"
+                type="text"
+                placeholder="Your full name"
+                required
+              />
+            </label>
+
+            <label for="review-area">
+              Your area
+              <input
+                id="review-area"
+                name="area"
+                type="text"
+                placeholder="Example: Whitefield"
+                required
+              />
+            </label>
+
+            <label for="review-rating">
+              Your rating
+              <select id="review-rating" name="rating" required>
+                <option value="">Choose a rating</option>
+                <option value="5">★★★★★ — Excellent</option>
+                <option value="4">★★★★ — Very good</option>
+                <option value="3">★★★ — Good</option>
+                <option value="2">★★ — Needs improvement</option>
+                <option value="1">★ — Poor</option>
+              </select>
+            </label>
+
+            <label for="review-message">
+              Your review
+              <textarea
+                id="review-message"
+                name="message"
+                placeholder="Tell us about your experience..."
+                required
+              ></textarea>
+            </label>
+
+            <button class="button button-dark" type="submit">
+              Submit review
+              <span aria-hidden="true">↗</span>
+            </button>
+
+            <div
+              class="review-success"
+              id="review-success"
+              role="status"
+              aria-live="polite"
+            >
+              Thank you for sharing your feedback.
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="final-cta section-padding">
+      <div class="container final-cta-inner">
+
+        <div>
+          <p class="eyebrow eyebrow-light">
+            Ready for better service?
+          </p>
+
+          <h2>
+            Let us take care of the plumbing.
+          </h2>
+        </div>
+
+        <div class="final-cta-actions">
+          <a class="button button-lime" href="book-service.html">
+            Book a plumber
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a class="button button-ghost" href="tel:+919876543210">
+            Call now
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+        <a class="brand brand-light" href="index.html">
+          <span class="brand-mark">↗</span>
+
+          <span class="brand-name">
+            Flow<span>Forge</span>
+          </span>
+        </a>
+
+        <p>
+          Modern plumbing service for homes and businesses across Bengaluru.
+        </p>
+      </div>
+
+      <div>
