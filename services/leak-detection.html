@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="FlowForge provides professional leak detection and leak repair services across Bengaluru for homes, apartments, offices and commercial properties."
+  />
+
+  <meta name="theme-color" content="#10232b" />
+
+  <title>Leak Detection &amp; Repair Bengaluru | FlowForge Plumbing</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../css/styles.css" />
+
+  <style>
+    .service-detail-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .service-detail-image {
+      min-height: 540px;
+      border-radius: 30px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(11, 104, 116, 0.08),
+          rgba(16, 35, 43, 0.72)
+        ),
+        url("https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=1100&q=85")
+          center / cover;
+      box-shadow: var(--shadow);
+    }
+
+    .service-detail-content > p {
+      max-width: 650px;
+      margin-top: 24px;
+      font-size: 1.08rem;
+    }
+
+    .service-detail-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .service-feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 40px;
+    }
+
+    .service-feature {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--white);
+    }
+
+    .service-feature strong {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--ink);
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    .service-feature span {
+      color: var(--muted);
+      font-size: 0.87rem;
+    }
+
+    .warning-box {
+      margin-top: 30px;
+      padding: 22px;
+      border-left: 4px solid var(--orange);
+      border-radius: 0 16px 16px 0;
+      background: #fff0ec;
+    }
+
+    .warning-box strong {
+      display: block;
+      margin-bottom: 7px;
+      color: #9d3526;
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    .warning-box p {
+      color: #79534d;
+      font-size: 0.9rem;
+    }
+
+    .symptom-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 17px;
+      margin-top: 35px;
+      list-style: none;
+    }
+
+    .symptom-grid li {
+      padding: 19px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--white);
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .symptom-grid li::before {
+      margin-right: 10px;
+      color: var(--teal);
+      content: "✓";
+    }
+
+    .service-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service-step-card {
+      padding: 28px;
+      border-top: 2px solid var(--mint);
+      background: #17363e;
+    }
+
+    .service-step-card span {
+      display: block;
+      margin-bottom: 28px;
+      color: var(--mint);
+      font: 700 1.8rem "Space Grotesk", sans-serif;
+    }
+
+    .service-step-card h3 {
+      margin-bottom: 10px;
+      color: var(--white);
+    }
+
+    .service-step-card p {
+      color: #b4c6c5;
+      font-size: 0.92rem;
+    }
+
+    .faq-list {
+      max-width: 850px;
+      margin-top: 35px;
+      border-top: 1px solid var(--line);
+    }
+
+    .faq-list details {
+      padding: 21px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .faq-list summary {
+      cursor: pointer;
+      color: var(--ink);
+      font: 600 1.1rem "Space Grotesk", sans-serif;
+      list-style: none;
+    }
+
+    .faq-list summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-list summary::after {
+      float: right;
+      color: var(--teal);
+      content: "+";
+      font-size: 1.4rem;
+    }
+
+    .faq-list details[open] summary::after {
+      content: "−";
+    }
+
+    .faq-list details p {
+      max-width: 700px;
+      margin-top: 14px;
+    }
+
+    @media (max-width: 850px) {
+      .service-detail-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .service-detail-image {
+        min-height: 420px;
+        order: -1;
+      }
+
+      .service-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 580px) {
+      .service-feature-grid,
+      .symptom-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-detail-image {
+        min-height: 350px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">
+    Skip to content
+  </a>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container announcement-inner">
+      <p>
+        <span class="status-dot" aria-hidden="true"></span>
+        Emergency plumbing support available 24/7
+      </p>
+
+      <a href="tel:+919876543210">
+        Call +91 98765 43210
+        <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+
+      <a class="brand" href="../index.html" aria-label="FlowForge Plumbing home">
+        <span class="brand-mark" aria-hidden="true">↗</span>
+
+        <span class="brand-name">
+          Flow<span>Forge</span>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="sr-only">Open navigation</span>
+      </button>
+
+      <nav
+        class="primary-navigation"
+        id="primary-navigation"
+        aria-label="Primary navigation"
+      >
+        <a class="nav-link" href="../index.html">Home</a>
+        <a class="nav-link active" href="../services.html">Services</a>
+        <a class="nav-link" href="../about.html">About us</a>
+        <a class="nav-link" href="../projects.html">Projects</a>
+        <a class="nav-link" href="../reviews.html">Reviews</a>
+        <a class="nav-link" href="../contact.html">Contact</a>
+
+        <a class="button button-small" href="../book-service.html">
+          Book a plumber
+          <span aria-hidden="true">↗</span>
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Service Hero -->
+    <section class="hero-section" aria-labelledby="service-hero-title">
+      <div class="container service-detail-layout">
+
+        <div class="service-detail-content">
+          <p class="eyebrow">
+            Leak detection and repair
+          </p>
+
+          <h1 id="service-hero-title">
+            Find the leak before it finds your wallet.
+          </h1>
+
+          <p>
+            A small leak can create moisture, damage surfaces and increase
+            water usage. FlowForge helps identify the source and complete
+            a reliable repair before the problem becomes more serious.
+          </p>
+
+          <div class="service-detail-actions">
+            <a class="button button-primary" href="../book-service.html">
+              Book an inspection
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <a class="button button-secondary" href="tel:+919876543210">
+              Call our team
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <div class="service-feature-grid">
+            <div class="service-feature">
+              <strong>Careful diagnosis</strong>
+              <span>We investigate the source instead of guessing.</span>
+            </div>
+
+            <div class="service-feature">
+              <strong>Clear explanation</strong>
+              <span>You understand the cause and repair options.</span>
+            </div>
+
+            <div class="service-feature">
+              <strong>Targeted repairs</strong>
+              <span>We focus on fixing the affected plumbing area.</span>
+            </div>
+
+            <div class="service-feature">
+              <strong>Final testing</strong>
+              <span>We check the repaired area before completing the job.</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="service-detail-image"
+          role="img"
+          aria-label="Plumber inspecting a possible water leak"
+        ></div>
+
+      </div>
+    </section>
+
+    <!-- Warning Signs -->
+    <section class="section-padding" aria-labelledby="symptoms-title">
+      <div class="container">
+
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">
+              Warning signs
+            </p>
+
+            <h2 id="symptoms-title">
+              Something may be leaking if you notice this.
+            </h2>
+          </div>
+
+          <p>
+            Visible water is not the only warning sign. Changes in your
+            walls, floors, water usage or plumbing performance can also
+            indicate a problem.
+          </p>
+        </div>
+
+        <ul class="symptom-grid">
+          <li>Water stains on walls or ceilings</li>
+          <li>Damp or musty smells</li>
+          <li>Unexplained increase in water usage</li>
+          <li>Dripping taps or exposed pipes</li>
+          <li>Water pooling near fixtures</li>
+          <li>Peeling paint or damaged surfaces</li>
+          <li>Unusual sounds behind walls</li>
+          <li>Low or inconsistent water pressure</li>
+        </ul>
+
+        <div class="warning-box">
+          <strong>Do not ignore recurring moisture.</strong>
+
+          <p>
+            If a leak keeps returning after a temporary fix, the actual
+            source may still be active. Contact the FlowForge team for
+            a proper inspection.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section-dark section-padding">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow eyebrow-light">
+            Our leak repair process
+          </p>
+
+          <h2>
+            A focused approach to a hidden problem.
+          </h2>
+        </div>
+
+        <div class="service-steps">
+
+          <article class="service-step-card">
+            <span>01</span>
+
+            <h3>Understand the symptoms</h3>
+
+            <p>
+              We ask about when the problem started, where it appears and
+              whether it changes when fixtures are used.
+            </p>
+          </article>
+
+          <article class="service-step-card">
+            <span>02</span>
+
+            <h3>Inspect the plumbing</h3>
+
+            <p>
+              We examine visible fixtures, connections, pipes and nearby
+              surfaces to narrow down the source.
+            </p>
+          </article>
+
+          <article class="service-step-card">
+            <span>03</span>
+
+            <h3>Repair and verify</h3>
+
+            <p>
+              We complete the repair, test the area and explain any
+              maintenance steps that may help prevent recurrence.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section-padding">
+      <div class="container difference-grid">
+
+        <div
+          class="difference-media"
+          role="img"
+          aria-label="Professional plumbing tools prepared for inspection"
+        ></div>
+
+        <div class="difference-content" style="color: var(--ink);">
+          <p class="eyebrow">
+            Why choose FlowForge
+          </p>
+
+          <h2>
+            The right repair starts with the right diagnosis.
+          </h2>
+
+          <p style="color: var(--muted);">
+            Replacing the wrong part or covering a visible symptom may
+            leave the real issue unresolved. We take time to understand
+            the plumbing problem before recommending the work.
+          </p>
+
+          <ul class="check-list">
+            <li style="color: var(--muted);">
+              Residential and commercial support
+            </li>
+
+            <li style="color: var(--muted);">
+              Clear repair recommendations
+            </li>
+
+            <li style="color: var(--muted);">
+              Tidy, respectful workmanship
+            </li>
+
+            <li style="color: var(--muted);">
+              Final checks after every repair
+            </li>
+          </ul>
+
+          <a class="button button-primary" href="../reviews.html">
+            Read customer reviews
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="service-intro section-padding" aria-labelledby="faq-title">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">
+            Leak repair FAQ
+          </p>
+
+          <h2 id="faq-title">
+            Questions customers usually ask.
+          </h2>
+        </div>
+
+        <div class="faq-list">
+
+          <details>
+            <summary>
+              How do I know if I have a hidden leak?
+            </summary>
+
+            <p>
+              Damp patches, unexplained water usage, musty smells, unusual
+              sounds and recurring moisture can all be signs. An inspection
+              is the best way to understand the cause.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Can you repair leaks behind walls?
+            </summary>
+
+            <p>
+              Our team can inspect accessible plumbing and recommend the
+              appropriate repair approach. The required work depends on the
+              location, pipe condition and access.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Should I turn off the water supply?
+            </summary>
+
+            <p>
+              If water is actively leaking and it is safe to do so, turning
+              off the nearest isolation valve or main water supply can help
+              reduce further damage while you arrange assistance.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Do you handle apartment and office leaks?
+            </summary>
+
+            <p>
+              Yes. FlowForge supports homes, apartments, offices, shops,
+              restaurants and other commercial properties across Bengaluru.
+            </p>
+          </details>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta section-padding">
+      <div class="container final-cta-inner">
+
+        <div>
+          <p class="eyebrow eyebrow-light">
+            Suspect a leak?
+          </p>
+
+          <h2>
+            Let’s find the source and fix it properly.
+          </h2>
+        </div>
+
+        <div class="final-cta-actions">
+          <a class="button button-lime" href="../book-service.html">
+            Book an inspection
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a class="button button-ghost" href="tel:+919876543210">
+            Call now
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+        <a class="brand brand-light" href="../index.html">
+          <span class="brand-mark">↗</span>
+
+          <span class="brand-name">
+            Flow<span>Forge</span>
+          </span>
+        </a>
+
+        <p>
+          Modern plumbing service for homes and businesses across Bengaluru.
+        </p>
+      </div>
+
+      <div>
+        <h4>Explore</h4>
+        <a href="../index.html">Home</a>
+        <a href="../services.html">Services</a>
+        <a href="../about.html">About us</a>
+        <a href="../projects.html">Projects</a>
+      </div>
+
+      <div>
+        <h4>Services</h4>
+        <a href="emergency-plumbing.html">
+          Emergency plumbing
+        </a>
+        <a href="leak-detection.html">
+          Leak repair
+        </a>
+        <a href="drain-cleaning.html">
+          Drain cleaning
+        </a>
+        <a href="water-heater.html">
+          Water heater service
+        </a>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+
+        <a href="tel:+919876543210">
+          +91 98765 43210
+        </a>
+
+        <a href="mailto:hello@flowforge.in">
+          hello@flowforge.in
+        </a>
+
+        <p>
+          Mon–Sun · 24/7 emergency line
+        </p>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <span>
+        © 2026 FlowForge Plumbing. All rights reserved.
+      </span>
+
+      <span>
+        <a href="../privacy-policy.html">Privacy</a>
+        ·
+        <a href="../terms.html">Terms</a>
+      </span>
+    </div>
+  </footer>
+
+  <!-- Mobile Action Bar -->
+  <div class="mobile-action-bar">
+    <a href="tel:+919876543210">
+      Call now
+    </a>
+
+    <a
+      href="https://wa.me/919876543210"
+      target="_blank"
+      rel="noopener"
+    >
+      WhatsApp
+    </a>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
